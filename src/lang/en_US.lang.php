@@ -89,10 +89,10 @@ $sm_lang = array(
        ),
        'menu' => array(
               'config' => 'Config',
-              'server' => 'Servers',
+              'server' => 'Sites',
               'server_log' => 'Log',
               'server_status' => 'Status',
-              'server_update' => 'Update',
+              /* 'server_update' => 'Update', */
               'user' => 'Users',
               'help' => 'Help',
        ),
@@ -471,7 +471,7 @@ $sm_lang = array(
  servers are up again:</b><br>%UP_SERVERS%',
        ),
        'login' => array(
-              'welcome_usermenu' => 'Welcome, %user_name%',
+              'welcome_usermenu' => '%user_name%',
               'title_sign_in' => 'Please sign in',
               'title_forgot' => 'Forgot your password?',
               'title_reset' => 'Reset your password',
