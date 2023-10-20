@@ -31,7 +31,8 @@
 </head>
 
 <body>
-	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+	{% if subtitle %}
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light{% if 'active' in direction_current %} acccc{% endif %}">
 		<a class="navbar-brand" href="index.php">
 			<img class="d-inline-block align-top" alt="{{ title }}"
 			src="src/templates/default/static/img/logo.png" />
@@ -46,9 +47,10 @@
 			{{ html_menu|raw }}
 		</div>
 	</nav>
+	{% endif %}
 	
 	{{ html_modal|raw }}
-
+	
 	<main role="main" class="container">
 		<noscript>
 			<div class="alert alert-danger" role="alert">
@@ -58,28 +60,28 @@
 		{% if not user_level and subtitle %}<h1>{{ subtitle }}</h1>{% endif %}
 		<div class="container">{{ header_accessories|raw }}</div>
 		{% for msg in messages %}
-		<div class="alert alert-{{ msg.class }}" role="alert">
-			<i class="fas fa-{{ msg.icon }}"></i> {{ msg.message|raw }}
-		</div>
+			<div class="alert alert-{{ msg.class }}" role="alert">
+				<i class="fas fa-{{ msg.icon }}"></i> {{ msg.message|raw }}
+			</div>
 		{% endfor %}
 		<div class="container">
 			<div class="row">{{ html_sidebar|raw }}</div>
 			<div class="row" id="content">{{ html_content|raw }}</div>
 		</div>
 	</main>
-	{% if add_footer %}
-	{% block footer %}
-	{#<footer class="footer" role="contentinfo">
-		<div class="container">
-			<span class="text-muted">
-				Powered by
-				<a href="https://github.com/phpservermon/phpservermon/" target="_blank" rel="noopener">
-					PHP Server Monitor {{ version }}.
-				</a><span style="color:red;">{{ update_available|raw }}</span><a href="#" class="float-right">{{ label_back_to_top }}</a>
-			</span>
-		</div>
-	</footer>#}
-	{% endblock %}
+	{% if subtitle %}
+		{% if add_footer %}
+			{% block footer %}
+			<footer class="footer" role="contentinfo">
+				<div class="container">
+					<span class="text-muted">
+						Powered by THACO Auto Dept
+						{#<span style="color:red;">{{ update_available|raw }}</span><a href="#" class="float-right">{{ label_back_to_top }}</a>#}
+					</span>
+				</div>
+			</footer>
+			{% endblock %}
+		{% endif %}
 	{% endif %}
 	<script src="src/templates/default/static/plugin/jquery/jquery-3.5.1.min.js"></script>
 	<script src="src/templates/default/static/plugin/popper.js/popper.min.js"></script>

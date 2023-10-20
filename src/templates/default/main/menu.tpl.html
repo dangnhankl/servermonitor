@@ -13,9 +13,9 @@
 <noscript>
 	<ul class="navbar-nav mr-auto">
 		
-		<li class="nav-item">
+		{#<li class="nav-item">
 			<a class="nav-link" href="{{ url_profile|raw }}">{{ label_profile }}</a>
-		</li>
+		</li>#}
 		<li class="nav-item">
 			<a class="nav-link" href="{{ url_logout|raw }}">{{ label_logout }}</a>
 		</li>
@@ -30,7 +30,7 @@
 			{{ label_usermenu }}
 		</a>
 		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			{#<a class="dropdown-item" href="{{ url_profile|raw }}">{{ label_profile }} </a>#}
+			<a class="dropdown-item" href="{{ url_profile|raw }}">{{ label_profile }} </a>
 			<a class="dropdown-item" href="{{ url_logout|raw }}">{{ label_logout }} </a>
 		</div>
 	</li>

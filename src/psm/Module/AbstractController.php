@@ -250,7 +250,7 @@ abstract class AbstractController implements ControllerInterface
                 $tpl_data['update_available'] = str_replace(
                     '{version}',
                     'v' .
-                    psm_get_conf('version_update_check'),
+                        psm_get_conf('version_update_check'),
                     psm_get_lang('system', 'update_available')
                 );
             }
