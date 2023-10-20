@@ -24,14 +24,19 @@
 	<link href="src/templates/default/static/css/bootstrap.min.css" rel="stylesheet">
 	<link href="src/templates/default/static/plugin/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
 	<link href="src/templates/default/static/css/style.min.css" rel="stylesheet">
+	<link href="src/templates/default/static/css/style.add.css" rel="stylesheet">
 	<!--[if lt IE 9]>
     	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
 
 <body>
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="index.php">{{ title }}</a>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="index.php">
+			<img class="d-inline-block align-top" alt="{{ title }}"
+			src="src/templates/default/static/img/logo.png" />
+			<span>Monitor</span>
+		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
 		 aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -41,7 +46,9 @@
 			{{ html_menu|raw }}
 		</div>
 	</nav>
+	
 	{{ html_modal|raw }}
+
 	<main role="main" class="container">
 		<noscript>
 			<div class="alert alert-danger" role="alert">
@@ -62,7 +69,7 @@
 	</main>
 	{% if add_footer %}
 	{% block footer %}
-	<footer class="footer" role="contentinfo">
+	{#<footer class="footer" role="contentinfo">
 		<div class="container">
 			<span class="text-muted">
 				Powered by
@@ -71,7 +78,7 @@
 				</a><span style="color:red;">{{ update_available|raw }}</span><a href="#" class="float-right">{{ label_back_to_top }}</a>
 			</span>
 		</div>
-	</footer>
+	</footer>#}
 	{% endblock %}
 	{% endif %}
 	<script src="src/templates/default/static/plugin/jquery/jquery-3.5.1.min.js"></script>

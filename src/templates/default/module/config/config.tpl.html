@@ -12,7 +12,7 @@
                 aria-controls="config-email" aria-selected="{% if email_active %}true{% else %}false{% endif %}">{{
                 label_tab_email }}</a>
         </li>
-        <li class="nav-item">
+        {#<li class="nav-item">
             <a class="nav-link {{ sms_active }}" id="config-sms-tab" data-toggle="tab" href="#config-sms" role="tab"
                 aria-controls="config-sms" aria-selected="{% if sms_active %}true{% else %}false{% endif %}">{{
                 label_tab_sms }}</a>
@@ -21,17 +21,17 @@
             <a class="nav-link {{ pushover_active }}" id="config-pushover-tab" data-toggle="tab" href="#config-pushover"
                 role="tab" aria-controls="config-pushover" aria-selected="{% if pushover_active %}true{% else %}false{% endif %}">{{
                 label_tab_pushover }}</a>
-        </li>
+        </li>#}
         <li class="nav-item">
             <a class="nav-link {{ telegram_active }}" id="config-telegram-tab" data-toggle="tab" href="#config-telegram"
                 role="tab" aria-controls="config-telegram" aria-selected="{% if telegram_active %}true{% else %}false{% endif %}">{{
                 label_tab_telegram }}</a>
         </li>
-        <li class="nav-item">
+        {#<li class="nav-item">
             <a class="nav-link {{ jabber_active }}" id="config-jabber-tab" data-toggle="tab" href="#config-jabber"
                role="tab" aria-controls="config-jabber" aria-selected="{% if jabber_active %}true{% else %}false{% endif %}">{{
                 label_tab_jabber }}</a>
-        </li>
+        </li>#}
     </ul>
     <!-- Tab panes -->
     <div class="tab-content">
